@@ -16,8 +16,8 @@ do
 			#setup http proxy with the machine ip 
 			networksetup -setwebproxy Wi-Fi $ip 8080
 			networksetup -setwebproxystate Wi-Fi on
-			#open new terminal window and start mitmweb proxy portal
-			osascript -e 'tell application "Terminal" to do script "mitmweb"'
+			#open mitmweb proxy portal without any output on bash
+			mitmweb > /dev/null
 			break
             ;;
         "Disable proxy")
