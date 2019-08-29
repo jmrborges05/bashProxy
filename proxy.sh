@@ -17,7 +17,7 @@ function enableProxy() {
     networksetup -setwebproxystate Wi-Fi on
     #open mitmweb proxy portal without any output on bash
     nohup mitmweb &>/dev/null &
-	echo "PROXY SETUP AND ENABLE"
+    echo "PROXY SETUP AND ENABLE"
 }
 
 
