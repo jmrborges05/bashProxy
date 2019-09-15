@@ -16,6 +16,11 @@ function enableProxy() {
     networksetup -setwebproxy Wi-Fi $ip 8080
     networksetup -setwebproxystate Wi-Fi on
     #open mitmweb proxy portal without any output on bash
+
+    #grab current user of the machine 
+    #user=$(who|awk '{print $1}')
+    #start mitmweb as current user 
+    #nohup sudo -u $user mitmweb &>/dev/null &
     nohup mitmweb &>/dev/null &
     echo "PROXY SETUP AND ENABLE"
 }
